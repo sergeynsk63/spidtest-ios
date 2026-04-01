@@ -16,25 +16,36 @@ workflows:
         TEAM_ID: "JL9MW5YCQM"
       xcode: latest
     scripts:
+      - name: Set up keychain
+        script: |
+          keychain initialize
       - name: Fetch signing files
         script: |
-          app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
-          app-store-connect fetch-signing-files "$TUNNEL_BUNDLE_ID" --type IOS_APP_STORE --create
-          app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" --type IOS_APP_STORE --create
-          app-store-connect certificates list --type IOS_DISTRIBUTION --save || \
-          app-store-connect certificates create --type IOS_DISTRIBUTION --save
-          keychain initialize
-          keychain add-certificates
-          xcode-project use-profiles --project "$XCODE_PROJECT"
-      - name: Verify profiles
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --platform IOS \
+            --type IOS_APP_STORE \
+            --create
+          app-store-connect fetch-signing-files "$TUNNEL_BUNDLE_ID" \
+            --platform IOS \
+            --type IOS_APP_STORE \
+            --create
+          app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
+            --platform IOS \
+            --type IOS_APP_STORE \
+            --create
+      - name: Add certs to keychain
         script: |
-          echo "=== Installed profiles ==="
-          ls ~/Library/MobileDevice/Provisioning\ Profiles/ || true
-          echo "=== Profile details ==="
-          for profile in ~/Library/MobileDevice/Provisioning\ Profiles/*.mobileprovision; do
-            echo "--- $profile ---"
-            security cms -D -i "$profile" | grep -A1 "Name\|TeamIdentifier\|application-identifier" || true
-          done
+          keychain add-certificates
+      - name: Set up profiles
+        script: |
+          xcode-project use-profiles --project "$XCODE_PROJECT"
+      - name: Verify signing
+        script: |
+          echo "=== Certificates ==="
+          security find-identity -v -p codesigning
+          echo "=== Profiles ==="
+          ls ~/Library/MobileDevice/Provisioning\ Profiles/ 2>/dev/null || echo "No profiles"
+          ls ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles/ 2>/dev/null || echo "No profiles in Xcode dir"
       - name: Increment build number
         script: |
           agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
