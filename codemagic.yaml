@@ -10,18 +10,31 @@ workflows:
         XCODE_PROJECT: "speedtest IOS.xcodeproj"
         XCODE_SCHEME: "speedtest IOS"
         APP_STORE_APP_ID: 6761053051
+        BUNDLE_ID: "com.vpneo.app"
+        TUNNEL_BUNDLE_ID: "com.vpneo.app.tunnel"
+        WIDGET_BUNDLE_ID: "com.vpneo.app.widget"
+        TEAM_ID: "JL9MW5YCQM"
       xcode: latest
     scripts:
       - name: Fetch signing files
         script: |
-          app-store-connect fetch-signing-files com.vpneo.app --type IOS_APP_STORE --create
-          app-store-connect fetch-signing-files com.vpneo.app.tunnel --type IOS_APP_STORE --create
-          app-store-connect fetch-signing-files com.vpneo.app.widget --type IOS_APP_STORE --create
+          app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
+          app-store-connect fetch-signing-files "$TUNNEL_BUNDLE_ID" --type IOS_APP_STORE --create
+          app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" --type IOS_APP_STORE --create
           app-store-connect certificates list --type IOS_DISTRIBUTION --save || \
           app-store-connect certificates create --type IOS_DISTRIBUTION --save
           keychain initialize
           keychain add-certificates
           xcode-project use-profiles --project "$XCODE_PROJECT"
+      - name: Verify profiles
+        script: |
+          echo "=== Installed profiles ==="
+          ls ~/Library/MobileDevice/Provisioning\ Profiles/ || true
+          echo "=== Profile details ==="
+          for profile in ~/Library/MobileDevice/Provisioning\ Profiles/*.mobileprovision; do
+            echo "--- $profile ---"
+            security cms -D -i "$profile" | grep -A1 "Name\|TeamIdentifier\|application-identifier" || true
+          done
       - name: Increment build number
         script: |
           agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
@@ -29,8 +42,7 @@ workflows:
         script: |
           xcode-project build-ipa \
             --project "$XCODE_PROJECT" \
-            --scheme "$XCODE_SCHEME" \
-            --archive-flags="-destination 'generic/platform=iOS' DEVELOPMENT_TEAM=JL9MW5YCQM"
+            --scheme "$XCODE_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
