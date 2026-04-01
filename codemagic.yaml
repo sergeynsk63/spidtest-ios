@@ -8,10 +8,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier:
-          - com.vpneo.app
-          - com.vpneo.app.tunnel
-          - com.vpneo.app.widget
+        bundle_identifier: com.vpneo.app
       vars:
         XCODE_PROJECT: "speedtest IOS.xcodeproj"
         XCODE_SCHEME: "speedtest IOS"
