@@ -6,11 +6,90 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A568219F2F6F0A5300514AA4 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A568219E2F6F0A5200514AA4 /* NetworkExtension.framework */; };
+		A56821A72F6F0A5300514AA4 /* VPNTunnelExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A568219C2F6F0A5200514AA4 /* VPNTunnelExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A568221E2F6F0FCD00514AA4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A568221D2F6F0FCD00514AA4 /* WidgetKit.framework */; };
+		A56822202F6F0FCD00514AA4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A568221F2F6F0FCD00514AA4 /* SwiftUI.framework */; };
+		A568222F2F6F0FCF00514AA4 /* VPNordWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A568221C2F6F0FCD00514AA4 /* VPNordWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A56822B12F6F196F00514AA4 /* SwiftyXrayKit in Frameworks */ = {isa = PBXBuildFile; productRef = A56822B02F6F196F00514AA4 /* SwiftyXrayKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A56821A52F6F0A5300514AA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EB48F62F5EF0CF0039C8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A568219B2F6F0A5200514AA4;
+			remoteInfo = VPNTunnelExtension;
+		};
+		A568222D2F6F0FCF00514AA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EB48F62F5EF0CF0039C8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A568221B2F6F0FCD00514AA4;
+			remoteInfo = VPNordWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A56821AC2F6F0A5300514AA4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A56821A72F6F0A5300514AA4 /* VPNTunnelExtension.appex in Embed Foundation Extensions */,
+				A568222F2F6F0FCF00514AA4 /* VPNordWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A568219C2F6F0A5200514AA4 /* VPNTunnelExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNTunnelExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A568219E2F6F0A5200514AA4 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		A568221C2F6F0FCD00514AA4 /* VPNordWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNordWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A568221D2F6F0FCD00514AA4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A568221F2F6F0FCD00514AA4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		A5EB48FE2F5EF0CF0039C8B7 /* speedtest IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speedtest IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A56821A82F6F0A5300514AA4 /* Exceptions for "VPNTunnelExtension" folder in "VPNTunnelExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A568219B2F6F0A5200514AA4 /* VPNTunnelExtension */;
+		};
+		A56822322F6F0FCF00514AA4 /* Exceptions for "VPNordWidget" folder in "VPNordWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A568221B2F6F0FCD00514AA4 /* VPNordWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A56821A02F6F0A5300514AA4 /* VPNTunnelExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A56821A82F6F0A5300514AA4 /* Exceptions for "VPNTunnelExtension" folder in "VPNTunnelExtension" target */,
+			);
+			path = VPNTunnelExtension;
+			sourceTree = "<group>";
+		};
+		A56822212F6F0FCD00514AA4 /* VPNordWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A56822322F6F0FCF00514AA4 /* Exceptions for "VPNordWidget" folder in "VPNordWidgetExtension" target */,
+			);
+			path = VPNordWidget;
+			sourceTree = "<group>";
+		};
 		A5EB49002F5EF0CF0039C8B7 /* speedtest IOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "speedtest IOS";
@@ -19,6 +98,24 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A56821992F6F0A5200514AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A568219F2F6F0A5300514AA4 /* NetworkExtension.framework in Frameworks */,
+				A56822B12F6F196F00514AA4 /* SwiftyXrayKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56822192F6F0FCD00514AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56822202F6F0FCD00514AA4 /* SwiftUI.framework in Frameworks */,
+				A568221E2F6F0FCD00514AA4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EB48FB2F5EF0CF0039C8B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A568219D2F6F0A5200514AA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A568219E2F6F0A5200514AA4 /* NetworkExtension.framework */,
+				A568221D2F6F0FCD00514AA4 /* WidgetKit.framework */,
+				A568221F2F6F0FCD00514AA4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A5EB48F52F5EF0CF0039C8B7 = {
 			isa = PBXGroup;
 			children = (
 				A5EB49002F5EF0CF0039C8B7 /* speedtest IOS */,
+				A56821A02F6F0A5300514AA4 /* VPNTunnelExtension */,
+				A56822212F6F0FCD00514AA4 /* VPNordWidget */,
+				A568219D2F6F0A5200514AA4 /* Frameworks */,
 				A5EB48FF2F5EF0CF0039C8B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				A5EB48FE2F5EF0CF0039C8B7 /* speedtest IOS.app */,
+				A568219C2F6F0A5200514AA4 /* VPNTunnelExtension.appex */,
+				A568221C2F6F0FCD00514AA4 /* VPNordWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +160,51 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A568219B2F6F0A5200514AA4 /* VPNTunnelExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56821A92F6F0A5300514AA4 /* Build configuration list for PBXNativeTarget "VPNTunnelExtension" */;
+			buildPhases = (
+				A56821982F6F0A5200514AA4 /* Sources */,
+				A56821992F6F0A5200514AA4 /* Frameworks */,
+				A568219A2F6F0A5200514AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A56821A02F6F0A5300514AA4 /* VPNTunnelExtension */,
+			);
+			name = VPNTunnelExtension;
+			packageProductDependencies = (
+				A56822B02F6F196F00514AA4 /* SwiftyXrayKit */,
+			);
+			productName = VPNTunnelExtension;
+			productReference = A568219C2F6F0A5200514AA4 /* VPNTunnelExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A568221B2F6F0FCD00514AA4 /* VPNordWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56822332F6F0FCF00514AA4 /* Build configuration list for PBXNativeTarget "VPNordWidgetExtension" */;
+			buildPhases = (
+				A56822182F6F0FCD00514AA4 /* Sources */,
+				A56822192F6F0FCD00514AA4 /* Frameworks */,
+				A568221A2F6F0FCD00514AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A56822212F6F0FCD00514AA4 /* VPNordWidget */,
+			);
+			name = VPNordWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = VPNordWidgetExtension;
+			productReference = A568221C2F6F0FCD00514AA4 /* VPNordWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A5EB48FD2F5EF0CF0039C8B7 /* speedtest IOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5EB49092F5EF0D10039C8B7 /* Build configuration list for PBXNativeTarget "speedtest IOS" */;
@@ -55,10 +212,13 @@
 				A5EB48FA2F5EF0CF0039C8B7 /* Sources */,
 				A5EB48FB2F5EF0CF0039C8B7 /* Frameworks */,
 				A5EB48FC2F5EF0CF0039C8B7 /* Resources */,
+				A56821AC2F6F0A5300514AA4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A56821A62F6F0A5300514AA4 /* PBXTargetDependency */,
+				A568222E2F6F0FCF00514AA4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A5EB49002F5EF0CF0039C8B7 /* speedtest IOS */,
@@ -80,6 +240,12 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					A568219B2F6F0A5200514AA4 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					A568221B2F6F0FCD00514AA4 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					A5EB48FD2F5EF0CF0039C8B7 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -91,20 +257,41 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				es,
 			);
 			mainGroup = A5EB48F52F5EF0CF0039C8B7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A56822AF2F6F196F00514AA4 /* XCRemoteSwiftPackageReference "SwiftyXrayKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A5EB48FF2F5EF0CF0039C8B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A5EB48FD2F5EF0CF0039C8B7 /* speedtest IOS */,
+				A568219B2F6F0A5200514AA4 /* VPNTunnelExtension */,
+				A568221B2F6F0FCD00514AA4 /* VPNordWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A568219A2F6F0A5200514AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A568221A2F6F0FCD00514AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EB48FC2F5EF0CF0039C8B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +302,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A56821982F6F0A5200514AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56822182F6F0FCD00514AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EB48FA2F5EF0CF0039C8B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +325,142 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A56821A62F6F0A5300514AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A568219B2F6F0A5200514AA4 /* VPNTunnelExtension */;
+			targetProxy = A56821A52F6F0A5300514AA4 /* PBXContainerItemProxy */;
+		};
+		A568222E2F6F0FCF00514AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A568221B2F6F0FCD00514AA4 /* VPNordWidgetExtension */;
+			targetProxy = A568222D2F6F0FCF00514AA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A56821AA2F6F0A5300514AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNTunnelExtension/VPNTunnelExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNTunnelExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNTunnelExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A56821AB2F6F0A5300514AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNTunnelExtension/VPNTunnelExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNTunnelExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNTunnelExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A56822302F6F0FCF00514AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNordWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNordWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A56822312F6F0FCF00514AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNordWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNordWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A5EB49072F5EF0D10039C8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -177,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -249,10 +585,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "speedtest IOS/speedtest_IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88J7NSW4ZW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "speedtest-IOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = VPNeo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to scan QR codes with server configurations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -263,13 +605,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.speedtestping.speedtestios.speedtest-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -280,10 +621,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "speedtest IOS/speedtest_IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88J7NSW4ZW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "speedtest-IOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = VPNeo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to scan QR codes with server configurations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -294,13 +641,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.speedtestping.speedtestios.speedtest-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpneo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,6 +655,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A56821A92F6F0A5300514AA4 /* Build configuration list for PBXNativeTarget "VPNTunnelExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56821AA2F6F0A5300514AA4 /* Debug */,
+				A56821AB2F6F0A5300514AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A56822332F6F0FCF00514AA4 /* Build configuration list for PBXNativeTarget "VPNordWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56822302F6F0FCF00514AA4 /* Debug */,
+				A56822312F6F0FCF00514AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5EB48F92F5EF0CF0039C8B7 /* Build configuration list for PBXProject "speedtest IOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -328,6 +692,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A56822AF2F6F196F00514AA4 /* XCRemoteSwiftPackageReference "SwiftyXrayKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dima-u/SwiftyXrayKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A56822B02F6F196F00514AA4 /* SwiftyXrayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A56822AF2F6F196F00514AA4 /* XCRemoteSwiftPackageReference "SwiftyXrayKit" */;
+			productName = SwiftyXrayKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5EB48F62F5EF0CF0039C8B7 /* Project object */;
 }

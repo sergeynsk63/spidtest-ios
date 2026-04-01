@@ -1,0 +1,48 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Disconnected" : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отключено" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Desconectado" } }
+      }
+    },
+    "Connecting..." : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Подключение..." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Conectando..." } }
+      }
+    },
+    "Connected" : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Подключено" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Conectado" } }
+      }
+    },
+    "Disconnecting..." : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отключение..." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Desconectando..." } }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Ошибка" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Error" } }
+      }
+    },
+    "VPN Status" : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Статус VPN" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estado VPN" } }
+      }
+    },
+    "See your VPN connection status at a glance." : {
+      "localizations" : {
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Статус VPN-подключения одним взглядом." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Ve el estado de tu conexión VPN de un vistazo." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}
